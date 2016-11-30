@@ -1,0 +1,1 @@
+json.array! @knows, partial: 'knows/know', as: :know
