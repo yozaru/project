@@ -12,6 +12,18 @@
   <dd><%= @know.body %></dd>
 </dl>
 
+<!-- 追加箇所 開始 -->
+<p>
+  <strong>Image:</strong>
+  <% if @know.image? %>
+    <div class="thumbnail">
+      <%= image_tag @know.image.url %>
+    </div>
+  <% end %>
+</p>
+<!-- 追加箇所 終了 -->
+
+
 <%= link_to t('.back', :default => t("helpers.links.back")),
               knows_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
