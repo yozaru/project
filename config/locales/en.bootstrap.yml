@@ -13,9 +13,10 @@ en:
       back: "Back"
       cancel: "Cancel"
       confirm: "Are you sure?"
-      destroy: "Delete"
-      new: "New"
-      edit: "Edit"
+      destroy: "削除"
+      new: "新規"
+#      edit: "Edit"
+      edit: "参照"
     titles:
       edit: "Edit %{model}"
       save: "Save %{model}"
