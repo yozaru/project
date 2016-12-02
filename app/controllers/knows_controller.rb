@@ -5,6 +5,7 @@ class KnowsController < ApplicationController
   # GET /knows.json
   def index
     @knows = Know.all
+#    @knows = Know.page(params[:page]).per(20).order(:id)
   end
 
   # GET /knows/1
@@ -15,6 +16,10 @@ class KnowsController < ApplicationController
   # GET /knows/new
   def new
     @know = Know.new
+  end
+
+  def search
+    @know = Know.search_names_or(params[:stxt])
   end
 
   # GET /knows/1/edit

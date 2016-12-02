@@ -23,13 +23,11 @@
     </tr>
   </thead>
   <tbody>
-    <% @knows.each do |know| i+=1 %>
+    <% @knows.each.nil? do |know| i+=1 %>
       <tr>
-<%#        < td><%= link_to know.id, know_path(know) %></td>
         <td><%= i %></td>
         <td width="200"><%= know.title %></td>
         <td width="100"><%= know.company %></td>
-<%#        <td width="500"><%= simple_format(know.body) %></td>
         <td width="500" height="10%"><%= know.body[0,40] %></td>
         <td>
          <%= link_to t('.edit', :default => t("helpers.links.edit")),
