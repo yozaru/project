@@ -19,7 +19,8 @@ class KnowsController < ApplicationController
   end
 
   def search
-    @know = Know.search_names_or(params[:stxt])
+    @knows = Know.search_names_or(params[:stxt])
+    render :index
   end
 
   # GET /knows/1/edit
