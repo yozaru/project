@@ -5,22 +5,14 @@
 </div>
 <% i = 0 %>
 
-<form class="navbar-form navbar-right" role="search" method="post" action="/search">
-  <div class="form-group">
-  <input name="stxt" type="text" class="form-control" placeholder="検索条件を入れてください">
-  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-  <button type="submit" class="btn btn-default">検索</button>
-  </div>
-</form>
-
-<table class="table table-striped">
+<table class="span11 table table-striped table-bordered table-hover table-condensed table-responsive">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:タイトル) %></th>
-      <th><%= model_class.human_attribute_name(:会社名) %></th>
+      <th><center><%= model_class.human_attribute_name(:id) %></center></th>
+      <th><center><%= model_class.human_attribute_name(:タイトル) %></center></th>
+      <th><center><%= model_class.human_attribute_name(:会社名) %></center></th>
       <th><center><%= model_class.human_attribute_name(:内容) %></center></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><center><%=t '.actions', :default => t("helpers.actions") %></center></th>
     </tr>
   </thead>
   <tbody>
@@ -31,7 +23,7 @@
         <td width="200"><%= know.title %></td>
         <td width="100"><%= know.company %></td>
 <%#        <td width="500"><%= simple_format(know.body) %></td>
-        <td width="500" height="10%"><%= know.body[0,40] %></td>
+        <td width="700" height="10%"><%= know.body[0,60] %></td>
         <td>
          <%= link_to t('.edit', :default => t("helpers.links.edit")),
          edit_know_path(know), :class => 'btn btn-default btn-xs' %>
