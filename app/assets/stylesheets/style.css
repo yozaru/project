@@ -2,7 +2,16 @@
 .navbar-default {
 background-color: #65baad;
 border-color: #3e6962;
+position: relative;
+min-height: 30px;
+margin-bottom: 20px;
+border: 1px solid transparent;
 }
+
+.navbar-inner {
+height: 50px;
+}
+
 /* navbar テキストカラー */
 .navbar-default .navbar-nav > li > a {
 color: #ffffff;
@@ -93,6 +102,11 @@ background-color: #65baad;
 /* navbar Brandのカラー */
 .navbar-default .navbar-brand {
 color: #ff5555;
+float: left;
+height: 30px;
+padding: 15px 15px;
+font-size: 18px;
+line-height: 20px;
 }
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {

@@ -1,0 +1,13 @@
+current directory: /home/rails/share/project/vendor/bundle/ruby/2.3.0/gems/json-2.0.2/ext/json
+/usr/local/rbenv/versions/2.3.1/bin/ruby -r ./siteconf20161207-2375-8rg4g5.rb extconf.rb
+creating Makefile
+
+current directory: /home/rails/share/project/vendor/bundle/ruby/2.3.0/gems/json-2.0.2/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/rails/share/project/vendor/bundle/ruby/2.3.0/gems/json-2.0.2/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /home/rails/share/project/vendor/bundle/ruby/2.3.0/gems/json-2.0.2/ext/json
+make "DESTDIR=" install
