@@ -1,13 +1,16 @@
 class KnowsController < ApplicationController
   before_action :set_know, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html
   # GET /knows
   # GET /knows.json
   def index
-    @knows = Know.all
+#    @knows = Know.all
+#    @knows = Know.page(params[:page])
+    @knows = Know.page(params[:page]).per(6).order(:id)
+    respond_with(@knows)
 #    @knows = Know.page(params[:page]).per(20).order(:id)
   end
-
+  
   # GET /knows/1
   # GET /knows/1.json
   def show
@@ -20,6 +23,7 @@ class KnowsController < ApplicationController
 
   def search
     @knows = Know.search_names_or(params[:stxt])
+#    @knows = Know.search_names_or(params[:stxt])
     render :index
   end
 
@@ -77,4 +81,5 @@ class KnowsController < ApplicationController
     def know_params
       params.require(:know).permit(:title, :company, :body, :image, :image_cache, :remove_image)
     end
+    
 end
