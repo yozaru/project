@@ -24,8 +24,13 @@
 <%#        <td width="500"><%= simple_format(know.body) %></td>
         <td width="700" height="10%"><%= know.body[0,60] %></td>
         <td>
-         <center><%= link_to t('.edit', :default => t("helpers.links.edit")),
-         edit_know_path(know), :class => 'btn btn-primary btn-lg' %></center>
+         <%= link_to t('.edit', :default => t("helpers.links.edit")),
+         edit_know_path(know), :class => 'btn btn-default btn-xs' %>
+         <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      know_path(know),
+<%#                      :method => :delete, %>
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>

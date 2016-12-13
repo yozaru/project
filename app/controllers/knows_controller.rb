@@ -16,6 +16,10 @@ class KnowsController < ApplicationController
   def show
   end
 
+  def shinki
+    @knows = Know.page(params[:page]).per(6).order(:create_date)
+  end
+
   # GET /knows/new
   def new
     @know = Know.new
@@ -24,7 +28,7 @@ class KnowsController < ApplicationController
   def search
     @knows = Know.search_names_or(params[:stxt])
 #    @knows = Know.search_names_or(params[:stxt])
-    render :index
+    render "index"
   end
 
   # GET /knows/1/edit
