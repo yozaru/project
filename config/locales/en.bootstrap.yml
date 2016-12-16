@@ -18,7 +18,9 @@ en:
 #      edit: "Edit"
       edit: "参照"
     titles:
-      edit: "Edit %{model}"
+#      edit: "Edit %{model}"
+      edit: "detail"
       save: "Save %{model}"
-      new: "New %{model}"
+#      new: "New %{model}"
+      new: "新規ケース"
       delete: "Delete %{model}"
